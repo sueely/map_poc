@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NavigationMapRoute">
+        <!-- Colors -->
+        <attr name="routeColor" format="color"/>
+        <attr name="routeModerateCongestionColor" format="color"/>
+        <attr name="routeSevereCongestionColor" format="color"/>
+        <attr name="routeShieldColor" format="color"/>
+
+        <!-- Scales -->
+        <attr name="routeScale" format="float"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="NavigationView">
+        <!-- Colors -->
+        <attr name="navigationViewPrimary" format="color"/>
+        <attr name="navigationViewSecondary" format="color"/>
+        <attr name="navigationViewAccent" format="color"/>
+        <attr name="navigationViewPrimaryText" format="color"/>
+        <attr name="navigationViewSecondaryText" format="color"/>
+
+        <!-- Instruction List -->
+        <attr name="navigationViewListBackground" format="color"/>
+
+        <!-- Banner -->
+        <attr name="navigationViewBannerBackground" format="color"/>
+        <attr name="navigationViewBannerPrimaryText" format="color"/>
+        <attr name="navigationViewBannerSecondaryText" format="color"/>
+        <attr name="navigationViewBannerManeuverPrimary" format="color"/>
+        <attr name="navigationViewBannerManeuverSecondary" format="color"/>
+
+    </declare-styleable>
+</resources>

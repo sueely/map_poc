@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.nng.igo.primong">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.mapbox.services.android.navigation.testapp.NavigationApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.mapbox.services.android.navigation.testapp.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.mapbox.services.android.navigation.testapp.activity.MockNavigationActivity"
+            android:label="@string/title_mock_navigation">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mapbox.services.android.navigation.testapp.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name="com.mapbox.services.android.navigation.testapp.activity.RerouteActivity"
+            android:label="@string/title_reroute">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mapbox.services.android.navigation.testapp.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name="com.mapbox.services.android.navigation.testapp.activity.navigationui.NavigationMapRouteActivity"
+            android:label="@string/title_navigation_route_ui">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mapbox.services.android.navigation.testapp.MainActivity"/>
+        </activity>
+
+      <activity
+            android:name="com.mapbox.services.android.navigation.testapp.activity.navigationui.NavigationViewActivity"
+            android:label="@string/title_navigation_view_ui">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mapbox.services.android.navigation.testapp.MainActivity"/>
+        </activity>
+        <receiver android:name="com.navngo.igo.javaclient.voice_recognition.TrueVoiceReceiver" >
+            <intent-filter>
+                <action android:name="MBTK_STARTED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="MBTK_RESULT_ACCEPT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="MBTK_RESULT_REJECT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="MBTK_RESULT_CANCEL" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="MBTK_REPORT_STATE" />
+            </intent-filter>
+            <!--<intent-filter>-->
+            <!--<action android:name="MBTK_AUDIO_INDICATOR" />-->
+            <!--</intent-filter>-->
+            <intent-filter>
+                <action android:name="iGoBroadcastReceiverTest" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
